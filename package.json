@@ -4,7 +4,7 @@
   "description": "Makes batch requests to facebook API an easy task for you",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node_modules/.bin/mocha --opts mocha.opts"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/ViktorKonsta/fb-ninja/issues"
   },
-  "homepage": "https://github.com/ViktorKonsta/fb-ninja#readme"
+  "homepage": "https://github.com/ViktorKonsta/fb-ninja#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
 }

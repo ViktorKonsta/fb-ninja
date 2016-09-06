@@ -1,0 +1,25 @@
+{
+  "name": "fb-ninja",
+  "version": "0.0.0",
+  "description": "Makes batch requests to facebook API an easy task for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorKonsta/fb-ninja.git"
+  },
+  "keywords": [
+    "facebook",
+    "fb",
+    "request",
+    "batch"
+  ],
+  "author": "ViktorKonsta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ViktorKonsta/fb-ninja/issues"
+  },
+  "homepage": "https://github.com/ViktorKonsta/fb-ninja#readme"
+}

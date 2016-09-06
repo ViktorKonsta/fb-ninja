@@ -33,6 +33,7 @@
     "lodash.chunk": "^4.2.0",
     "lodash.isarray": "^4.0.0",
     "lodash.isfunction": "^3.0.8",
-    "lodash.isnull": "^3.0.0"
+    "lodash.isnull": "^3.0.0",
+    "lodash.isplainobject": "^4.0.6"
   }
 }

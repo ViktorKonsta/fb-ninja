@@ -1,4 +1,2 @@
-const facebookRequestNinja = require("./facebook")
-const fb = require("fb")
-module.exports = facebookRequestNinja
-module.exports.fb = fb
+module.exports = require("./lib/facebookNinja")
+module.exports.fb = require("fb")

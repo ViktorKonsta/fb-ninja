@@ -1,4 +1,3 @@
---reporter nyan
 --inline-diffs
 --ui exports
 --timeout 10000

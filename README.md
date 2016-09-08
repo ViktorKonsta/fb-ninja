@@ -48,15 +48,19 @@ First of all make sure you have installed dev dependencies:
 npm install
 ```
 
-To run tests you should make file at the root folder `facebook.json` and put there 
-your personal valid facebook "accessToken", "name" and "id". You can get them by using
-`Facebook Graph API Explorer`
+To run tests you should make file at the root folder `facebook.json` and put there expected 
+expected by you information that you can get from`Facebook Graph API Explorer`.
 
 ```json
 {
-  "name": "<EXPECTED_FACEBOOK_NAME>",
-  "id": "<EXPECTED_FACEBOOK_ID>",
-  "accessToken": "<YOUR_ACCESS_TOKEN_HERE>"
+  "me": {  
+    "name": "[FACEBOOK_NAME]",
+    "id": "[FACEBOOK_ID]",
+    "accessToken": "[FACEBOOK_ACCESS_TOKEN]"
+  },
+  "page": {
+    "accessToken": "[PAGE_FACEBOOK_ACCESS_TOKEN]"
+  }
 }
 ```
 

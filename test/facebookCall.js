@@ -13,14 +13,14 @@ describe("facebookCall", () => {
 
   it("Check access token quickly", () => {
 
-    assert.isOk(config.accessToken)
-    assert.isString(config.accessToken)
+    assert.isOk(config.me.accessToken)
+    assert.isString(config.me.accessToken)
 
   })
 
   it("Make one valid facebook request", function*() {
 
-    const response = yield facebookCall({ api: "me", body: { access_token: config.accessToken } })
+    const response = yield facebookCall({ api: "me", body: { access_token: config.me.accessToken } })
 
     assert.isObject(response)
     assert.isOk(response)
@@ -31,7 +31,7 @@ describe("facebookCall", () => {
 
   it("Make one invalid facebook request", function*() {
 
-    const response = facebookCall({ api: "mes", body: { access_token: config.accessToken } })
+    const response = facebookCall({ api: "mes", body: { access_token: config.me.accessToken } })
     yield assert.isRejected(response)
 
   })
@@ -42,7 +42,7 @@ describe("facebookCall", () => {
       api: "",
       method: "post",
       body: {
-        access_token: config.accessToken,
+        access_token: config.me.accessToken,
         batch: [
           { relative_url: "me", method: "get" },
           { relative_url: "me?fields=id", method: "get" },
@@ -61,13 +61,13 @@ describe("facebookCall", () => {
       assert.propertyVal(res, "code", 200)
     })
 
-    assert.deepPropertyVal(response[0], "response.name", config.name)
-    assert.deepPropertyVal(response[0], "response.id", config.id)
+    assert.deepPropertyVal(response[0], "response.name", config.me.name)
+    assert.deepPropertyVal(response[0], "response.id", config.me.id)
 
-    assert.deepPropertyVal(response[1], "response.id", config.id)
+    assert.deepPropertyVal(response[1], "response.id", config.me.id)
 
-    assert.deepPropertyVal(response[2], "response.name", config.name)
-    assert.deepPropertyVal(response[2], "response.id", config.id)
+    assert.deepPropertyVal(response[2], "response.name", config.me.name)
+    assert.deepPropertyVal(response[2], "response.id", config.me.id)
  
   })
 

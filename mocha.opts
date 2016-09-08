@@ -1,3 +1,5 @@
+--reporter nyan
+--growl
 --inline-diffs
 --ui exports
 --no-timeouts

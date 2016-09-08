@@ -1,3 +1,4 @@
 --inline-diffs
 --ui exports
---timeout 10000
+--no-timeouts
+--check-leaks

@@ -71,4 +71,24 @@ describe("facebookCall", () => {
  
   })
 
+  it("Make 3 invalid requests with invalid access token", function*() {
+
+    const request = {
+      api: "",
+      method: "post",
+      body: {
+        access_token: "INVALID_ACCESS_TOKEN",
+        batch: [
+          { relative_url: "me", method: "get" },
+          { relative_url: "me?fields=id", method: "get" },
+          { relative_url: "me?fields=name", method: "get" }
+        ]
+      }
+    }
+
+    const response = facebookCall(request)
+    yield assert.isRejected(response)
+
+  })
+
 })

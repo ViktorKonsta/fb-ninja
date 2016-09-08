@@ -39,3 +39,29 @@ ninja([req1], options)
 ## Reuqest options
 
 > Will be later
+
+## Tests
+
+First of all make sure you have installed dev dependencies:
+
+```
+npm install
+```
+
+To run tests you should make file at the root folder `facebook.json` and put there 
+your personal valid facebook "accessToken", "name" and "id". You can get them by using
+`Facebook Graph API Explorer`
+
+```json
+{
+  "name": "<EXPECTED_FACEBOOK_NAME>",
+  "id": "<EXPECTED_FACEBOOK_ID>",
+  "accessToken": "<YOUR_ACCESS_TOKEN_HERE>"
+}
+```
+
+Then run
+
+```
+npm test
+```

@@ -4,7 +4,9 @@
   "description": "Makes batch requests to facebook API an easy task for you",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --opts mocha.opts"
+    "test": "node_modules/.bin/mocha --opts mocha.opts",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 {
   "name": "fb-ninja",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Makes batch requests to facebook API an easy task for you",
   "main": "index.js",
   "scripts": {

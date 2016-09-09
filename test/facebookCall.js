@@ -56,7 +56,6 @@ describe("facebookCall", () => {
     assert.isArray(response)
 
     response.forEach(res => {    
-      assert.property(res, "request")
       assert.propertyVal(res, "status", "Success")
       assert.propertyVal(res, "code", 200)
     })

@@ -1,4 +1,3 @@
---reporter nyan
 --growl
 --inline-diffs
 --ui exports
